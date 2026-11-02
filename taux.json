@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "produit": "Livre des recettes OKALMI",
+  "annee": 2026,
+  "derniereMiseAJour": "2026-11-02",
+  "validite": "Taux et seuils applicables aux micro-entrepreneurs en 2026, vérifiés le 02/11/2026 sur les sites officiels listés dans « sources ». Les montants exacts sont toujours calculés par l'Urssaf et l'administration fiscale.",
+  "cotisations": {
+    "description": "Taux global de cotisations sociales (régime micro-social), en % du chiffre d'affaires encaissé, à partir du 1er janvier 2026.",
+    "ventes": { "libelle": "Vente de marchandises, objets, fournitures, denrées (BIC)", "taux": 12.3 },
+    "prestationsBIC": { "libelle": "Prestations de services commerciales et artisanales (BIC)", "taux": 21.2 },
+    "prestationsBNC": { "libelle": "Autres prestations de services (BNC)", "taux": 25.6 },
+    "liberalesCipav": { "libelle": "Professions libérales réglementées relevant de la Cipav (BIC ou BNC)", "taux": 23.2 }
+  },
+  "acre": {
+    "description": "Taux minorés pendant la période ACRE : jusqu'à la fin du 3e trimestre civil suivant celui du début d'activité. Le niveau dépend de la date de début d'activité (décret n° 2026-69 du 6 février 2026 : exonération ramenée de 50 % à 25 % pour les créations à compter du 1er juillet 2026). La demande d'ACRE se fait au plus tard le 60e jour suivant le début d'activité.",
+    "demandeDelaiJours": 60,
+    "periodes": [
+      {
+        "libelle": "Début d'activité jusqu'au 30 juin 2026",
+        "debutActiviteAvant": "2026-07-01",
+        "exonerationPct": 50,
+        "taux": { "ventes": 6.2, "prestationsBIC": 10.6, "prestationsBNC": 12.8, "liberalesCipav": 13.4 }
+      },
+      {
+        "libelle": "Début d'activité à compter du 1er juillet 2026",
+        "debutActiviteDepuis": "2026-07-01",
+        "exonerationPct": 25,
+        "taux": { "ventes": 9.3, "prestationsBIC": 15.9, "prestationsBNC": 19.2, "liberalesCipav": 17.4 }
+      }
+    ]
+  },
+  "formationProfessionnelle": {
+    "description": "Contribution à la formation professionnelle (CFP), en % du chiffre d'affaires, selon le profil de l'entrepreneur.",
+    "commercant": 0.1,
+    "artisan": 0.3,
+    "liberal": 0.2
+  },
+  "taxeChambreConsulaire": {
+    "description": "Taxe pour frais de chambre consulaire, en % du chiffre d'affaires (taux hors Alsace-Moselle), selon le profil et la nature du chiffre d'affaires. Non due par les professions libérales, ni l'année de création, ni si le CA de l'avant-dernière année est inférieur à 5 000 €. Artisan en double immatriculation CCI/CMA : 0,007 % en plus pour la CCI (non inclus ici).",
+    "commercant": { "ventes": 0.015, "prestations": 0.044 },
+    "artisan": { "ventes": 0.22, "prestations": 0.48 },
+    "liberal": { "ventes": 0, "prestations": 0 }
+  },
+  "plafondsMicro": {
+    "description": "Plafonds annuels de chiffre d'affaires du régime de la micro-entreprise, valables pour 2026, 2027 et 2028. Proratisés en cas de début d'activité en cours d'année. Activité mixte : CA global ≤ 203 100 € dont prestations de services (BIC + BNC) ≤ 83 600 €. Sortie du régime après deux années civiles consécutives de dépassement.",
+    "periode": "2026-2028",
+    "ventes": 203100,
+    "prestations": 83600
+  },
+  "franchiseTVA": {
+    "description": "Franchise en base de TVA (art. 293 B du CGI), seuils inchangés en 2026. Dépassement du seuil de base : TVA due à partir du 1er janvier de l'année suivante. Dépassement du seuil majoré : TVA due dès le 1er jour de dépassement.",
+    "ventes": 85000,
+    "ventesMajore": 93500,
+    "prestations": 37500,
+    "prestationsMajore": 41250
+  },
+  "versementLiberatoire": {
+    "description": "Versement libératoire de l'impôt sur le revenu (sur option), en % du chiffre d'affaires, en plus des cotisations sociales. Condition : revenu fiscal de référence du foyer de l'année N-2 inférieur ou égal au plafond par part.",
+    "ventes": 1.0,
+    "prestationsBIC": 1.7,
+    "prestationsBNC": 2.2,
+    "rfrParPart": { "option2026": 29315, "option2027": 29579 }
+  },
+  "abattementForfaitaire": {
+    "description": "Abattement forfaitaire pour frais appliqué par l'administration fiscale sur le CA déclaré (déclaration 2042-C-PRO), sans versement libératoire.",
+    "ventes": 71,
+    "prestationsBIC": 50,
+    "prestationsBNC": 34,
+    "minimum": 305
+  },
+  "declarations": {
+    "description": "Échéances Urssaf : déclaration mensuelle exigible le dernier jour du mois suivant ; déclaration trimestrielle exigible le dernier jour du mois suivant le trimestre (30 avril, 31 juillet, 31 octobre, 31 janvier). Première déclaration : délai minimum de 90 jours après le début d'activité (tableaux Urssaf).",
+    "premiereDeclarationMensuelle": "Fin du mois qui suit les 3 mois civils complets suivant le début d'activité (ex. début en octobre → 28 février de l'année suivante).",
+    "premiereDeclarationTrimestrielle": "Début d'activité de janvier à mars → 31 juillet ; avril à juin → 31 octobre ; juillet à septembre → 31 janvier de l'année suivante ; octobre à décembre → 30 avril de l'année suivante."
+  },
+  "sources": [
+    { "libelle": "Autoentrepreneur.urssaf.fr — L'essentiel du statut (taux de cotisations 2026, taux ACRE selon la date de début d'activité, abattements, plafonds)", "url": "https://www.autoentrepreneur.urssaf.fr/portail/accueil/sinformer-sur-le-statut/lessentiel-du-statut.html" },
+    { "libelle": "Urssaf.fr — Évolution des taux de cotisations sociales des auto-entrepreneurs (BNC 25,6 % au 1er janvier 2026, Cipav 23,2 %), mis à jour le 30 janvier 2026", "url": "https://www.urssaf.fr/accueil/actualites/taux-cotisations-autoentrepeneur.html" },
+    { "libelle": "Autoentrepreneur.urssaf.fr — 2026 : nouveaux seuils de chiffre d'affaires (203 100 € / 83 600 €), mis à jour le 20 février 2026", "url": "https://www.autoentrepreneur.urssaf.fr/portail/accueil/sinformer-sur-le-statut/toutes-les-actualites/2026--modification-des-seuils-de.html" },
+    { "libelle": "Autoentrepreneur.urssaf.fr — Déclarer et payer mes cotisations (tableaux des premières échéances mensuelles et trimestrielles)", "url": "https://www.autoentrepreneur.urssaf.fr/portail/accueil/une-question/toutes-les-fiches-pratiques/declarer-et-payer-mes-cotisation.html" },
+    { "libelle": "Entreprendre.service-public.gouv.fr — Régime fiscal de la micro-entreprise (plafonds 2026, abattements 71 / 50 / 34 %, versement libératoire 1 / 1,7 / 2,2 %), vérifié le 13 mai 2026", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23267" },
+    { "libelle": "Entreprendre.service-public.gouv.fr — Franchise en base de TVA (85 000 / 93 500 € et 37 500 / 41 250 €), vérifié le 1er janvier 2026", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F21746" },
+    { "libelle": "Entreprendre.service-public.gouv.fr — Acre : taux minoré égal à 75 % du taux normal, durée, demande sous 60 jours, vérifié le 1er juillet 2026", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F11677" },
+    { "libelle": "Entreprendre.service-public.gouv.fr — Acre : l'exonération passe de 50 % à 25 % pour les micro-entreprises créées à compter du 1er juillet 2026 (décret n° 2026-69 du 6 février 2026), publié le 11 février 2026", "url": "https://entreprendre.service-public.gouv.fr/actualites/A18795" },
+    { "libelle": "Impots.gouv.fr — Le versement libératoire (taux 1 %, 1,7 %, 2,2 %), modifié le 7 janvier 2026", "url": "https://www.impots.gouv.fr/professionnel/le-versement-liberatoire" },
+    { "libelle": "Impots.gouv.fr — Conditions pour opter pour le versement libératoire (RFR par part : 29 315 € pour l'option 2026, 29 579 € pour l'option 2027), mis à jour le 14 octobre 2026", "url": "https://www.impots.gouv.fr/professionnel/questions/en-tant-que-micro-entrepreneur-sous-quelles-conditions-puis-je-opter-pour-l" },
+    { "libelle": "Economie.gouv.fr — Micro-entreprises, quel est le montant de vos cotisations sociales ? (taux 2026, CFP 0,1 / 0,2 / 0,3 %), écrit le 6 mars 2026", "url": "https://www.economie.gouv.fr/entreprises/gerer-sa-micro-entreprise/micro-entreprises-quel-est-le-montant-de-vos-cotisations-sociales" },
+    { "libelle": "Entreprendre.service-public.gouv.fr — Taxe pour frais de chambre consulaire du micro-entrepreneur (0,015 % / 0,044 % CCI ; 0,22 % / 0,48 % CMA)", "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F37483" }
+  ]
+}
